@@ -30,4 +30,12 @@ O servidor inciará na porta:3333 - acesse http://localhost:3333
 
 <br>
 
+<details>
+   <summary>Modelo do banco de dados</summary>
+  
+<p align="center">
+  <img src="https://github.com/MariaGabrielaReis/jstack-fincheck-api/assets/69374340/54676dc8-8315-4190-838b-e8fd6d2ed54a" width=100% />
+</p>
+</details>
+
 [![image](https://img.shields.io/badge/✨%20Maria%20Gabriela%20Reis,%202023-LinkedIn-009973?style=flat-square)](https://www.linkedin.com/in/mariagabrielareis/)
