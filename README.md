@@ -15,14 +15,23 @@ $ git clone https://github.com/MariaGabrielaReis/jstack-fincheck-api.git
 
 # Instale as dependências do projeto, assim como suas tipagens
 $ yarn
-
-# Execute a aplicação
-$ yarn start
-
 ```
-O servidor inciará na porta:3333 - acesse http://localhost:3333
 
-> Use o Insomnia, por exemplo, para realizar as requisições
+Antes de rodar o projeto, crie o arquivo `.env` (na raíz do projeto) com as seguintes variáveis:
+
+```bash
+# DATABASE
+DATABASE_URL="postgresql://<USER>:<PASSWORD>@localhost:5432/fincheck?schema=public"
+```
+
+Agora execute a aplicação com o comando abaixo, assim o servidor inciará na porta:3333:
+
+```bash
+# Execute a aplicação
+$ yarn dev
+```
+
+> Use o Insomnia, por exemplo, para realizar as requisições (importe a coleção [deste arquivo](./requests_collection))
 
 ## :railway_track: Rotas
 
