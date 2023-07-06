@@ -22,6 +22,7 @@ Antes de rodar o projeto, crie o arquivo `.env` (na raíz do projeto) com as seg
 ```bash
 # DATABASE
 DATABASE_URL="postgresql://<USER>:<PASSWORD>@localhost:5432/fincheck?schema=public"
+JWT_SECRET=
 ```
 
 Agora execute a aplicação com o comando abaixo, assim o servidor inciará na porta:3333:
