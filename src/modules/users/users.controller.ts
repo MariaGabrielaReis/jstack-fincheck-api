@@ -1,4 +1,5 @@
 import { Controller, Get } from '@nestjs/common';
+
 import { LoggedUserId } from 'src/shared/decorators/LoggedUserId';
 import { UsersService } from './users.service';
 
