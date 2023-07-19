@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Param,
+  ParseUUIDPipe,
   Post,
   Put,
 } from '@nestjs/common';
@@ -29,21 +30,21 @@ export class BankAccountsController {
     return this.bankAccountsService.findAllByUserId(userId);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.bankAccountsService.findOne(+id);
-  }
-
-  @Put(':id')
+  @Put(':bankAccountId')
   update(
-    @Param('id') id: string,
+    @LoggedUserId() userId: string,
+    @Param('bankAccountId', ParseUUIDPipe) bankAccountId: string,
     @Body() updateBankAccountDto: UpdateBankAccountDto,
   ) {
-    return this.bankAccountsService.update(+id, updateBankAccountDto);
+    return this.bankAccountsService.update(
+      userId,
+      bankAccountId,
+      updateBankAccountDto,
+    );
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.bankAccountsService.remove(+id);
+    return this.bankAccountsService.remove(id);
   }
 }
