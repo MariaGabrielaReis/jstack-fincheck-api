@@ -8,6 +8,7 @@ import {
   Put,
 } from '@nestjs/common';
 
+import { LoggedUserId } from 'src/shared/decorators/LoggedUserId';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { UpdateTransactionDto } from './dto/update-transaction.dto';
 import { TransactionsService } from './transactions.service';
@@ -22,8 +23,8 @@ export class TransactionsController {
   }
 
   @Get()
-  findAll() {
-    return this.transactionsService.findAll();
+  findAll(@LoggedUserId() userId: string) {
+    return this.transactionsService.findAllByUserId(userId);
   }
 
   @Put(':id')
