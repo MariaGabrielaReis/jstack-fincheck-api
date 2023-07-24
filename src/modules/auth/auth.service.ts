@@ -52,7 +52,7 @@ export class AuthService {
           createMany: {
             data: [
               // Income
-              { name: 'Salário', icon: 'travel', type: 'INCOME' },
+              { name: 'Salário', icon: 'salary', type: 'INCOME' },
               { name: 'Freelance', icon: 'freelance', type: 'INCOME' },
               { name: 'Dividendos', icon: 'dividend', type: 'INCOME' },
               { name: 'Outro', icon: 'other', type: 'INCOME' },
