@@ -6,9 +6,11 @@ import {
   HttpCode,
   HttpStatus,
   Param,
+  ParseIntPipe,
   ParseUUIDPipe,
   Post,
   Put,
+  Query,
 } from '@nestjs/common';
 
 import { LoggedUserId } from 'src/shared/decorators/LoggedUserId';
@@ -29,8 +31,12 @@ export class TransactionsController {
   }
 
   @Get()
-  findAll(@LoggedUserId() userId: string) {
-    return this.transactionsService.findAllByUserId(userId);
+  findAll(
+    @LoggedUserId() userId: string,
+    @Query('month', ParseIntPipe) month: number,
+    @Query('year', ParseIntPipe) year: number,
+  ) {
+    return this.transactionsService.findAllByUserId(userId, { month, year });
   }
 
   @Put(':transactionId')
