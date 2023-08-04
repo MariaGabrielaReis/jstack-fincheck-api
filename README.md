@@ -1,4 +1,4 @@
-<div align="center"> <img src="https://github.com/MariaGabrielaReis/jstack-fincheck-api/assets/69374340/ae3a6f5c-df08-4972-b630-9985bb6dcae3" /> </div>
+<div align="center"> <img src="https://github.com/MariaGabrielaReis/jstack-fincheck-api/assets/69374340/e2aca505-b920-449c-9f30-b6f840761096" /> </div>
 
 API para o projeto Fincheck, um app para gerenciamento de finanças pessoais! 💸 <br>
 **Aplicação construída em um evento do JStack** :fire:
